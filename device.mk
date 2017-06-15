@@ -78,6 +78,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:system/etc/sensors/hals.conf \
     $(LOCAL_PATH)/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf
+    
+# Thermal
+PRODUCT_PACKAGES += \
+    thermal.msm8996
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/thermal/thermal-engine.conf:system/etc/thermal-engine.conf
 
 # msm8996-common
 $(call inherit-product, device/leeco/msm8996-common/msm8996.mk)
