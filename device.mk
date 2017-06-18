@@ -71,7 +71,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
-
+    
+# DU Updater
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.du.updater=zl1
 
 # Sensors
 PRODUCT_COPY_FILES += \
