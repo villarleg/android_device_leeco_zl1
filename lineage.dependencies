@@ -2,5 +2,11 @@
  {
    "repository": "android_device_leeco_msm8996-common",
    "target_path": "device/leeco/msm8996-common"
+   "branch": "lineage-15.1"
+ },
+ {
+   "repository": "TheMuppets/proprietary_vendor_leeco",
+   "target_path": "vendor/leeco"
+   "branch": "lineage-15.1"
  }
 ]
