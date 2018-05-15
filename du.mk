@@ -15,15 +15,17 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit from zl1 device
 $(call inherit-product, device/leeco/zl1/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/rr/config/common_full_phone.mk)
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/du/config/common_full_phone.mk)
 
-PRODUCT_NAME := rr_zl1
+PRODUCT_NAME := du_zl1
 PRODUCT_DEVICE := zl1
 PRODUCT_MANUFACTURER := LeEco
 PRODUCT_BRAND := LeEco
